@@ -55,10 +55,33 @@ public class Main {
 		} else if ((userInput == ROCK && opponent == SCISSAOR) ||
 				(userInput == SCISSAOR && opponent == PAPER) || 
 				(userInput == PAPER && opponent == ROCK)) {
+			printOpponentHand(opponent);
 			System.out.println("You Win");
 		} else {
 			System.out.println("You Lose");
 		}
 
+	}
+	
+	private static void printOpponentHand(int opponent) {
+		String hand = "";
+		
+		switch (opponent) {
+		case ROCK:
+			hand = "Rock";
+			break;
+		case SCISSAOR:
+			hand = "Scissaor";
+			break;
+			
+		case PAPER:
+			hand = "Papper";
+			break;
+
+		default:
+			break;
+		}
+
+		System.out.println("Opponent: " + hand);
 	}
 }
